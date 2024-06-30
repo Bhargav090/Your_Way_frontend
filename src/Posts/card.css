@@ -1,0 +1,43 @@
+.card {
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    width: 300px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+  }
+  
+  .card-header {
+    padding: 10px;
+    border-bottom: 1px solid #dbdbdb;
+    display: flex;
+    align-items: center;
+  }
+  
+  .card-username {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .card-body {
+    text-align: center;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-footer {
+    padding: 10px;
+  }
+  
+  .card-description {
+    font-size: 14px;
+    color: #555;
+  }
+.loading{
+    margin-top: 10%;
+    font-size: 2.5rem;
+}  
