@@ -8,7 +8,7 @@ export default class Main extends React.Component {
     return (
       <div className="main-nav">
         <NavLink to='/home' className='linklu'>Home</NavLink>
-        <NavLink to='/about' className='linklu'>About</NavLink>
+        <NavLink to='/profile' className='linklu'>Profile</NavLink>
         <NavLink to='/contact' className='linklu'>Contact Us</NavLink>
         <NavLink to='/' className='linklu'>Logout</NavLink>
       </div>

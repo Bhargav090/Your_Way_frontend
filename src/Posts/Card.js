@@ -5,7 +5,7 @@ function Card({name, image, description}) {
   return (
     <div className="card">
       <div className="card-header">
-        <h3 className="card-username">{name}</h3>
+        <h3 className="card-username">Posted By : {name}</h3>
       </div>
       <div className="card-body">
         <img src={image} alt={name} className="card-image" />

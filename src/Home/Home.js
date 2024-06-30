@@ -63,10 +63,9 @@ const Home = () => {
       <div className="nav-bar">
         <Main />
       </div>
-      <div>
-        <h1>Welcome {username}</h1>
-      </div>
-      <div>
+      <div className="block">
+        <h1 className="h1main">Welcome {username}</h1>
+        <div>
         {posts.map((post)=>(
           <Card 
           image={post.p_img}
@@ -75,6 +74,27 @@ const Home = () => {
           userid = {userId}
           />
         ))}
+      </div>
+      </div>
+      <div className="div3">
+        <center><h2 className="h2upd">Updated News</h2></center>
+        <div className="updcard">
+          <h3 className="h3head">Srm Univerisity Breaked the Highest Package</h3>
+          <br></br>
+          <p>
+            SRM Institute of Science and Technology (SRMIST) has broken its own record of highest package by the wonderful student named Akash Reddy.
+            He has been offered a package of 1.2 crore per annum by Microsoft.
+            This student also has a affair with this co-student named Naras.
+          </p>
+          <br></br>
+          <h3 className="h3head">Srm Univerisity Breaked the Highest Package</h3>
+          <br></br>
+          <p>
+            SRM Institute of Science and Technology (SRMIST) has broken its own record of highest package by the wonderful student named Akash Reddy.
+            He has been offered a package of 1.2 crore per annum by Microsoft.
+            This student also has a affair with this co-student named Naras.
+          </p>
+        </div>
       </div>
     </div>
   );
