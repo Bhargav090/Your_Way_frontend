@@ -3,7 +3,7 @@ import Main from "./Main";
 import "./home.css";
 import { store } from "../App";
 import axios from "axios";
-import { NavLink, Navigate } from 'react-router-dom';
+import { NavLink, Navigate } from "react-router-dom";
 import url from "../url";
 import Card from "../Posts/Card";
 
@@ -11,22 +11,22 @@ const Home = () => {
   const { token } = useContext(store);
   const [username, setUsername] = useState("");
   const [userId, setUserId] = useState("");
-  const [posts, setPosts] = useState([])
-  const [status, setStatus] = useState('loading');
+  const [posts, setPosts] = useState([]);
+  const [status, setStatus] = useState("loading");
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(url + "/home", {
           headers: {
-            'Authorization': {token},
+            Authorization: { token },
           },
         });
-        setPosts(response.data)
-        setStatus('loaded')
+        setPosts(response.data);
+        setStatus("loaded");
       } catch (err) {
         console.log(err);
-        setStatus('Error')
+        setStatus("Error");
       }
     };
     if (token) {
@@ -52,11 +52,15 @@ const Home = () => {
   if (!token) {
     return <Navigate to="/" />;
   }
-  if(status=='loading'){
-    return <center className="loading">Loading The Posts Please Be Patient..😉</center>
+  if (status == "loading") {
+    return (
+      <center className="loading">
+        Loading The Posts Please Be Patient..😉
+      </center>
+    );
   }
-  if(status=='Error'){
-    return <center>Error In Loading We Are Sorry For this..😣</center>
+  if (status == "Error") {
+    return <center>Error In Loading We Are Sorry For this..😣</center>;
   }
   return (
     <div className="home">
@@ -66,34 +70,50 @@ const Home = () => {
       <div className="block">
         <h1 className="h1main">Welcome {username}</h1>
         <div>
-        {posts.map((post)=>(
-          <Card 
-          image={post.p_img}
-          name = {post.p_name}
-          description={post.p_description}
-          userid = {userId}
-          />
-        ))}
-      </div>
+          {posts.map((post) => (
+            <Card
+              image={post.p_img}
+              name={post.p_name}
+              description={post.p_description}
+              userid={userId}
+            />
+          ))}
+        </div>
       </div>
       <div className="div3">
-        <center><h2 className="h2upd">Updated News</h2></center>
+        <center>
+          <h2 className="h2upd">News and Updates</h2>
+        </center>
         <div className="updcard">
-          <h3 className="h3head">Srm Univerisity Breaked the Highest Package</h3>
-          <br></br>
+          <h3 className="h3head">
+            Updated software improves slicing for large-format 3D printing
+          </h3>
+          <br />
+          <h5>
+            from:{" "}
+            <a
+              href="https://techxplore.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://techxplore.com/
+            </a>
+          </h5>
+          <br />
           <p>
-            SRM Institute of Science and Technology (SRMIST) has broken its own record of highest package by the wonderful student named Akash Reddy.
-            He has been offered a package of 1.2 crore per annum by Microsoft.
-            This student also has a affair with this co-student named Naras.
+            Researchers at the Department of Energy's Oak Ridge National
+            Laboratory have developed the first additive manufacturing slicing
+            computer application to simultaneously speed and simplify digital
+            conversion of accurate...
+            <a
+              href="https://techxplore.com/news/2024-07-software-slicing-large-format-3d.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="read-more">Read More</span>
+            </a>
           </p>
-          <br></br>
-          <h3 className="h3head">Srm Univerisity Breaked the Highest Package</h3>
-          <br></br>
-          <p>
-            SRM Institute of Science and Technology (SRMIST) has broken its own record of highest package by the wonderful student named Akash Reddy.
-            He has been offered a package of 1.2 crore per annum by Microsoft.
-            This student also has a affair with this co-student named Naras.
-          </p>
+          <br />
         </div>
       </div>
     </div>

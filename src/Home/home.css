@@ -71,3 +71,14 @@ p{
     font-weight: 500;
     line-height: 1.5rem;
 }
+
+  .read-more {
+    color: #0056b3;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .read-more:hover {
+    text-decoration: underline;
+  }
+  

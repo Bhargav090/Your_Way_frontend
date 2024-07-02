@@ -1,0 +1,50 @@
+.upload-post {
+    padding: 20px;
+  }
+  
+  .upload-post h1 {
+    text-align: center;
+    margin-left: 15%;
+  }
+  
+  .upload-post form {
+    margin-left: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .upload-post form div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .upload-post form label {
+    margin-bottom: 5px;
+  }
+  
+  .upload-post form input,
+  .upload-post form textarea {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .upload-post form button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .upload-post form button:hover {
+    background-color: #0056b3;
+  }
+  
+.uploadone{
+  margin-right: 10%;
+}
+.hiupload{
+  margin-bottom: 3%;
+}

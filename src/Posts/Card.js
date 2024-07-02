@@ -1,10 +1,13 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
 import './card.css'
 
-function Card({name, image, description}) {
+function Card({ name, image, description }) {
   return (
     <div className="card">
       <div className="card-header">
+        <FontAwesomeIcon icon={faUser} className="user-icon" />
         <h3 className="card-username">Posted By : {name}</h3>
       </div>
       <div className="card-body">
