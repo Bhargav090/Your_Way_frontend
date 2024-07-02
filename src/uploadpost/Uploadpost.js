@@ -10,7 +10,7 @@ const Uploadpost = () => {
   const [postImage, setPostImage] = useState("");
   const { token } = useContext(store);
   const [username, setUsername] = useState("");
-  const [userId, setUserId] = useState("");
+  const [setUserId] = useState("");
   const [p_description, setPDescription] = useState("");
   const [status, setStatus] = useState("");
   const navigate = useNavigate(); // Use the useNavigate hook

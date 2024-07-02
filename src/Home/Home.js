@@ -3,7 +3,7 @@ import Main from "./Main";
 import "./home.css";
 import { store } from "../App";
 import axios from "axios";
-import { NavLink, Navigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import url from "../url";
 import Card from "../Posts/Card";
 

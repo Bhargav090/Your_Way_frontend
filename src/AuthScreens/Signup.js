@@ -2,7 +2,6 @@ import React from 'react'
 import './auth.css'
 import url from '../url'
 import axios from 'axios'
-import Home from '../Home/Home'
 import { Navigate } from 'react-router-dom';
 export default class Signup extends React.Component {
   constructor(){
@@ -35,7 +34,7 @@ export default class Signup extends React.Component {
         }
       }
     )
-    .catch((errRes) => {
+    .catch(() => {
       this.setState({ status: "connection problem." });
   });
   }

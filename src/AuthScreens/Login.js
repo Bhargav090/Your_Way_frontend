@@ -7,7 +7,7 @@ import {store} from '../App'
 const Login = () => {
   const [toHome, setToHome] = useState(false);
   const [status, setStatus] = useState('');
-  const { token, setToken } = useContext(store); 
+  const {setToken } = useContext(store); 
   const login = async (e) => {
     e.preventDefault();
     const obj = {
@@ -35,7 +35,6 @@ const Login = () => {
   return (
     <div className='signup'>
       <div className="moving-background">
-        {/* Your moving objects */}
       </div>
       <div className='M-text'>
         <h1 className='M-heading'>
