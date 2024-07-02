@@ -2,12 +2,13 @@ import React, { useContext, useState } from 'react';
 import './auth.css';
 import url from '../url';
 import axios from 'axios';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useNavigate} from 'react-router-dom';
 import {store} from '../App' 
 const Login = () => {
   const [toHome, setToHome] = useState(false);
   const [status, setStatus] = useState('');
   const {setToken } = useContext(store); 
+  const navigate = useNavigate(); 
   const login = async (e) => {
     e.preventDefault();
     const obj = {
@@ -31,7 +32,9 @@ const Login = () => {
   if (toHome) {
     return <Navigate to="/home" />;
   }
-
+  const navigateToSignup=()=>{
+    navigate('/signup'); 
+  }
   return (
     <div className='signup'>
       <div className="moving-background">
@@ -49,13 +52,14 @@ const Login = () => {
           <div className='uname'>
             <label className='label'>Username:</label><br />
             <input type="text" name="username" placeholder='User Name' className='username' required />
-          </div>
+          </div><br></br>
           <div className='upwd'>
             <label className='label'>Password:</label><br />
             <input type="password" name="password" placeholder='Password' className='password' required />
           </div>
           <button className='sb-btn'>Submit</button>
-        </form>
+        </form><br></br>
+        <h5 className='already'>New To YourWayo <span className='linkto' onClick={navigateToSignup}>Login</span></h5>
       </div>
       {status && <p className='error-message'>{status}</p>}
     </div>

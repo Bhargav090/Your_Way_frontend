@@ -1,2 +1,2 @@
-const url = "http://localhost:1313"
+const url = "https://your-way.onrender.com"
 export default url

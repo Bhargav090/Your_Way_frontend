@@ -9,7 +9,6 @@
 }
 
 .signup {
-    background: rgba(255, 255, 255, 0.6);
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
     position: relative;
@@ -34,35 +33,37 @@
     margin-right: 20vh; 
     margin-left: 20vh; 
     height: 80vh;
-     margin-top: 5%; 
+    margin-top: 5%; 
     border: 1px solid #ccc;
     border-radius: 8px; 
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px; 
 }
 
 .label {
     font-weight: bold;
+    padding: 1%;
 }
 
 .username, .password, .email {
-    width: 100%;
+    width: calc(100% - 20px);
     height: 2rem;
-    padding: 10px;
     margin-top: 2%;
     margin-bottom: 2%;
+    padding-left: 10px; 
+    padding-right: 10px; 
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box;
 }
 
 .sb-btn {
     width: 100%;
     height: 2.5rem;
     margin-top: 10px;
-    background-color: #4CAF50;
+    background-color: #0056b3;
     color: white;
     border: none;
     border-radius: 4px;
@@ -71,7 +72,16 @@
 }
 
 .sb-btn:hover {
-    background-color: #45a049;
+    background-color: #0056b3;
+}
+
+.signup {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sb-btn:hover {
+    background-color: #0056b3;
 }
 .signup{
     display: flex;
@@ -201,4 +211,8 @@
     font-weight: 900;
     color: blue;
     text-decoration: underline;
+}
+
+.already{
+    cursor: pointer;
 }
