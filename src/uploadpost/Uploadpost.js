@@ -5,6 +5,7 @@ import { Navigate, useNavigate } from 'react-router-dom';
 import Main from "../Home/Main";
 import '../Home/home.css';
 import './upload.css';
+import url from "../url";
 
 const Uploadpost = () => {
   const [postImage, setPostImage] = useState("");
@@ -51,7 +52,7 @@ const Uploadpost = () => {
     };
 
     try {
-      const response = await axios.post("http://localhost:1313/uploadpost", postData, {
+      const response = await axios.post(url+"/uploadpost", postData, {
         headers: {
           'Authorization': token
         }

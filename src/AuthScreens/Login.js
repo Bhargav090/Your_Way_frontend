@@ -59,7 +59,7 @@ const Login = () => {
           </div>
           <button className='sb-btn'>Submit</button>
         </form><br></br>
-        <h5 className='already'>New To YourWayo <span className='linkto' onClick={navigateToSignup}>Login</span></h5>
+        <h5 className='already'>New To YourWay <span className='linkto' onClick={navigateToSignup}>Signup</span></h5>
       </div>
       {status && <p className='error-message'>{status}</p>}
     </div>
