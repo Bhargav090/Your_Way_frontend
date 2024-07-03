@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/logo.ico" style="border-radius: 24px"/>
+    <link rel="icon" type="image/png" href="%PUBLIC_URL%/logo.png" sizes="32x32">
+    <link rel="apple-touch-icon" type="image/png" href="%PUBLIC_URL%/logo.png" sizes="180x180">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -28,6 +29,14 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <style>
+      link[rel="icon"] {
+        border-radius: 50%;
+      }
+      link[rel="apple-touch-icon"] {
+        border-radius: 50%;
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
