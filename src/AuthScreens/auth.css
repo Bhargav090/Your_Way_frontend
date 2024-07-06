@@ -95,10 +95,12 @@
     /* background-color: #007BFF; */
     color: rgb(0, 0, 0);
 }
-
+.f-heading{
+    font-size: 2vw;
+}
 .M-heading {
     text-align: center;
-    font-size: 2rem;
+    font-size: 4vw;
 }
 .f-heading{
     text-align: center;
@@ -215,4 +217,35 @@
 
 .already{
     cursor: pointer;
+}
+
+@media (max-width: 650px) {
+    .signup {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .M-text {
+        width: 100%;
+        margin-top: 10vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: #007BFF; */
+        color: rgb(0, 0, 0);
+        text-align: center;
+    }
+    .f-heading{
+        font-size: 5vw;
+    }
+    .M-heading {
+        text-align: center;
+        font-size: 8vw;
+    }
+    .form{
+        width: 80vw;
+        margin-right: 10vw; 
+        margin-left: 10vw; 
+        height: 50vh;
+    }
 }

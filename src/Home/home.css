@@ -82,3 +82,33 @@ p{
     text-decoration: underline;
   }
   
+
+
+  @media (max-width:650px) {
+    .div3{
+        display: none;
+    }
+    .block{
+        width: 100%;
+        margin: 1vw;
+    }
+    .main-nav{
+        display: flex;
+        flex-direction: row;
+    }
+    .home{
+        display: block;
+        height: 100vh;
+    }
+    .nav-bar{
+        display: flex;
+        position: fixed;
+        height: 15vw;
+        width: 100%;
+        box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    .linklu{
+        margin: 0;
+        padding: 5vw;
+    }
+  }
