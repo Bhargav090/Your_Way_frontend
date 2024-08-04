@@ -23,6 +23,7 @@ const Login = () => {
       } else {
         setToken(posRes.data.token);
         setToHome(true);
+        alert('This website backend is hosted with render😅, So please wait for 1-2 minutes it will automatically take you to home page.')
       }
     } catch (errRes) {
       setStatus("Connection problem.");
