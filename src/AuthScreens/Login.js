@@ -11,6 +11,7 @@ const Login = () => {
   const navigate = useNavigate(); 
   const login = async (e) => {
     e.preventDefault();
+    alert('This website backend is hosted with render😅, So please wait for 1-2 minutes it will automatically take you to home page.')
     const obj = {
       username: e.target.username.value,
       password: e.target.password.value
@@ -18,7 +19,6 @@ const Login = () => {
 
     try {
       const posRes = await axios.post(url + '/login', obj);
-      alert('This website backend is hosted with render😅, So please wait for 1-2 minutes it will automatically take you to home page.')
       if (posRes.data.auth === "gosignup") {
         alert("Not A User Please Signup");
       } else {
