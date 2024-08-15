@@ -19,8 +19,8 @@ const Signup = () => {
 
     try {
       const posRes = await axios.post(url + '/signup', obj);
+      alert('This website backend is hosted with render😅, So please wait for 1-2 minutes it will automatically take you to home page.')
       if (posRes.data.auth === "signedup") {
-        alert('This website backend is hosted with render😅, So please wait for 1-2 minutes it will automatically take you to home page.')
         setToHome(true);
       } else if (posRes.data.auth === "logged") {
         alert('This website backend is hosted with render😅, So please wait for 1-2 minutes it will automatically take you to home page.')
